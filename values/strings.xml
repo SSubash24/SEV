@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">SEV</string>
+    <string name="welcome_to_your_app">Welcome to SEV</string>
+    <string name="login">Login</string>
+    <string name="signup">Signup</string>
+    <string name="already_have_an_account">Already have an account</string>
+    <string name="view_total_consumption">View Total Consumption</string>
+    <string name="view_total_cost">View Total Cost</string>
+    <string name="charging_cycles_placeholder">0</string>
+    <string name="vehicle_id_placeholder">123</string>
+    <string name="total_consumption_placeholder">0 kWh</string>
+    <string name="total_cost_placeholder">$0</string>
+    <string name="week_view_report_month_download_pdf">(Week View Report / Month Download PDF)</string>
+    <string name="no_of_charging_cycles">No. of Charging Cycles</string>
+    <string name="total_consumption">Total Consumption</string>
+    <string name="vehicle_id">Vehicle ID</string>
+    <string name="total_cost">Total Cost</string>
+    <string name="enter_vehicle_id">Enter Vehicle ID</string>
+    <string name="enter_vehicle_id1" />
+    <string name="activate_monthly_plan">Activate Monthly Plan</string>
+    <string name="rs_30">Rs.30</string>
+    <string name="cost_for_month">Cost for Month</string>
+    <string name="activate_weekly_plan">Activate Weekly Plan</string>
+    <string name="rs_10">Rs.10</string>
+    <string name="cost_for_week">Cost for Week</string>
+    <string name="no_of_days_left_for_free_trial">No. of days left for free trial</string>
+</resources>

@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_background"
+    android:padding="16dp">
+
+    <!-- Box for Subscription Page Title -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/titleCard"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        app:cardCornerRadius="16dp"
+        app:strokeColor="#1B1B1B"
+        app:strokeWidth="2dp"
+        app:cardElevation="4dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp"
+        android:padding="8dp">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SUBSCRIPTION PAGE"
+            android:layout_gravity="center"
+            android:textColor="#F502CD"
+            android:textStyle="italic"
+            android:textSize="28sp" />
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/planDetails"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Plan Details"
+        android:textStyle="bold"
+        android:textColor="#0934ED"
+        android:textSize="25sp"
+        app:layout_constraintTop_toBottomOf="@id/titleCard"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="50dp" />
+
+    <!-- Box with light black border -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/subscriptionDetailsCard"
+        android:layout_width="0dp"
+        android:layout_height="400dp"
+        app:cardCornerRadius="16dp"
+        app:strokeColor="#1B1B1B"
+        app:strokeWidth="2dp"
+        app:cardBackgroundColor="#EDBECF"
+        app:cardElevation="4dp"
+        app:layout_constraintTop_toBottomOf="@id/planDetails"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp"
+        android:padding="16dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- Days Left -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/daysLeftLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="4dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="25dp"
+                android:padding="16dp">
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Cost for Week -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/costWeekLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="4dp"
+                app:layout_constraintTop_toBottomOf="@id/daysLeftLayout"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="40dp"
+                android:padding="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Cost for Week"
+                        android:textSize="18sp"
+                        android:padding="8dp" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/weeklyCost"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Rs.10"
+                        android:textSize="18sp"
+                        android:padding="8dp"
+                        android:background="@drawable/textbox_style" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/activateWeekPlanButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Activate Weekly Plan"
+                android:textColor="#2D0136"
+                android:backgroundTint="#E5EDE4"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                app:cornerRadius="16dp"
+                app:layout_constraintTop_toBottomOf="@id/costWeekLayout"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="20dp" />
+
+            <!-- Cost for Month -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/costMonthLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="4dp"
+                app:layout_constraintTop_toBottomOf="@id/activateWeekPlanButton"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="30dp"
+                android:padding="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Cost for Month"
+                        android:textSize="18sp"
+                        android:padding="8dp" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/monthlyCost"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Rs.30"
+                        android:textSize="18sp"
+                        android:padding="8dp"
+                        android:background="@drawable/textbox_style" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/activateMonthPlanButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Activate Monthly Plan"
+                android:textColor="#2D0136"
+                android:backgroundTint="#E5EDE4"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                app:cornerRadius="16dp"
+                app:layout_constraintTop_toBottomOf="@id/costMonthLayout"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="20dp" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/goBackButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Go Back"
+        android:textColor="#2D0136"
+        android:backgroundTint="#E5EDE4"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        app:cornerRadius="16dp"
+        app:layout_constraintTop_toBottomOf="@id/subscriptionDetailsCard"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>

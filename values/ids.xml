@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="planDetails" type="id" />
+    <item name="daysLeft" type="id" />
+    <item name="costLayout" type="id" />
+    <item name="monthlyCost" type="id" />
+    <item name="yearlyCost" type="id" />
+    <item name="activatePlanButton" type="id" />
+</resources>

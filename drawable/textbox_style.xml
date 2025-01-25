@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="rectangle">
+    <corners android:radius="8dp" /> <!-- Adjust the radius as needed for rounded corners -->
+    <solid android:color="#F0F0F0" /> <!-- Background color of the box, you can modify the color code -->
+    <stroke
+        android:width="2dp"
+        android:color="#C0C0C0" />
+</shape>

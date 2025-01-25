@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_background">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Main Page Title -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="16dp"
+            app:strokeColor="#1B1B1B"
+            app:strokeWidth="2dp"
+            app:cardElevation="4dp"
+            android:layout_marginTop="16dp"
+            android:padding="8dp">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/mainpagetitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Vehicle Reports"
+                android:textColor="#F502CD"
+                android:textStyle="italic"
+                android:textSize="28sp"
+                android:layout_gravity="center" />
+        </com.google.android.material.card.MaterialCardView>
+        <!-- First Section: Input Fields and Charging Cycles Display -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="320dp"
+            app:cardCornerRadius="16dp"
+            app:strokeColor="#1B1B1B"
+            app:strokeWidth="2dp"
+            app:cardBackgroundColor="#EDBECF"
+            app:cardElevation="4dp"
+            android:layout_marginTop="20dp"
+            android:padding="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center_horizontal">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/textbox_style"
+                    app:boxBackgroundMode="outline"
+                    app:boxStrokeColor="@color/colorPrimary"
+                    android:layout_marginTop="20dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/username_input"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Enter Username"
+                        android:textSize="18sp"
+                        android:contentDescription="Input field for username, please enter your username here" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/textbox_style"
+                    app:boxBackgroundMode="outline"
+                    app:boxStrokeColor="@color/colorPrimary"
+                    android:layout_marginTop="20dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/vehicle_id_input"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Enter Vehicle ID"
+                        android:textSize="18sp"
+                        android:contentDescription="Input field for vehicle ID, please enter your vehicle ID here" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/fetch_data_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Fetch Charging Cycles"
+                    android:textColor="#E60B0B"
+                    android:backgroundTint="#E8976E"
+                    android:layout_marginTop="30dp"
+                    app:cornerRadius="16dp"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:contentDescription="Button to fetch charging cycles"
+                    android:layout_gravity="center_horizontal" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/charging_cycles_text_view"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/textbox_style"
+                    android:text="Charging Cycles: N/A"
+                    android:textSize="18sp"
+                    android:layout_marginTop="25dp"
+                    android:gravity="center"
+                    android:contentDescription="Displays the number of charging cycles" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <!-- Second Section: Total Consumption to Total Cost -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            app:cardCornerRadius="16dp"
+            app:strokeColor="#1B1B1B"
+            app:strokeWidth="2dp"
+            app:cardBackgroundColor="#EDBECF"
+            app:cardElevation="4dp"
+            android:layout_marginTop="20dp"
+            android:padding="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center_horizontal">
+
+                <!-- Total Consumption Section -->
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Total Consumption"
+                    android:textSize="25sp"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="30dp"
+                    android:layout_gravity="center_horizontal" />
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="16dp"
+                    app:strokeColor="#1B1B1B"
+                    app:strokeWidth="2dp"
+                    app:cardBackgroundColor="#EDBECF"
+                    app:cardElevation="4dp"
+                    android:layout_marginTop="20dp"
+                    android:padding="16dp">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/total_consumption_text_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="(Week-View-Report/Month-Download-PDF)"
+                        android:textColor="#EA0707"
+                        android:textSize="18sp"
+                        android:gravity="center" />
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- Charging Cycles Buttons -->
+                <LinearLayout
+                    android:id="@+id/charging_cycles_button_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/week_charging_cycles_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Week"
+                        android:textColor="#2D0136"
+                        android:backgroundTint="#E5EDE4"
+                        android:layout_marginEnd="10dp"
+                        app:cornerRadius="16dp"
+                        style="@style/Widget.MaterialComponents.Button.OutlinedButton" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/month_charging_cycles_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Month"
+                        android:textColor="#2D0136"
+                        android:backgroundTint="#E5EDE4"
+                        app:cornerRadius="16dp"
+                        style="@style/Widget.MaterialComponents.Button.OutlinedButton" />
+                </LinearLayout>
+
+                <!-- Total Cost Section -->
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Total Cost"
+                    android:textColor="@color/black"
+                    android:textSize="25sp"
+                    android:layout_marginTop="30dp"
+                    android:layout_gravity="center_horizontal" />
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="16dp"
+                    app:strokeColor="#1B1B1B"
+                    app:strokeWidth="2dp"
+                    app:cardBackgroundColor="#EDBECF"
+                    app:cardElevation="4dp"
+                    android:layout_marginTop="20dp"
+                    android:padding="16dp">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/total_cost_text_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="(Week-View-Report/Month-Download-PDF)"
+                        android:textColor="#EA0707"
+                        android:textSize="18sp"
+                        android:gravity="center" />
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- Total Cost Buttons -->
+                <LinearLayout
+                    android:id="@+id/total_cost_button_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_horizontal">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/week_total_cost_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Week"
+                        android:textColor="#2D0136"
+                        android:backgroundTint="#E5EDE4"
+                        android:layout_marginEnd="10dp"
+                        app:cornerRadius="16dp"
+                        style="@style/Widget.MaterialComponents.Button.OutlinedButton" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/month_total_cost_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Month"
+                        android:textColor="#2D0136"
+                        android:backgroundTint="#E5EDE4"
+                        app:cornerRadius="16dp"
+                        style="@style/Widget.MaterialComponents.Button.OutlinedButton" />
+                </LinearLayout>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Subscription Button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/subscription_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add Subscription"
+            android:textColor="@android:color/white"
+            android:backgroundTint="@color/colorPrimary"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="40dp"
+            android:minHeight="48dp"
+            app:cornerRadius="16dp"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:contentDescription="Button to add subscription" />
+    </LinearLayout>
+</ScrollView>
